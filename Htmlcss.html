@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS실습</title>
+    <!--<style>
+        /*style 지정방법 
+        1.태그에 직접준다(전부다 포함시켜서 색상지정됨)
+        *2.태그에각각 id를 부여해서 따로따로 지정(#으로 그 id선택가능)
+        *3.어떤 그룹을 같이줌(클래스), 클래스를 부여하는 방법(복수지정가능,id는 고유함(유니크))
+
+        4.하위레벨에 지정하기=어떤태그1이 나온 다음 뒤에 나오는 (descendant[후손] 레벨)태그2에 타일을적용하는 방법
+        -이 경우에는 반드시 첫 번째 태그안에서 두 번쨰 태그를 포함하고있어야 한다
+        */
+        5.동일레벨의 다른 태그에 지정= (sibling 레벨)
+        - 태그1 ~ 태그2 {} 로 지정(일반형제선택자 general sibling selector)
+        - 태그1 + 태그2 내 바로뒤에있는 놈한테 지정 , 인접 형제 지정자
+        6.동적의사클래스(dynamic pseudo-class)
+        -태그:동적의사클래스{} 일반적으로 하이퍼링크를 제공하는 <A>태그에 많이 적용
+        -link visited hover active focus 사용자가 지정할 수 있는 동적 의사 클래스들임
+        7.의사 요소(pseudo-element)에 지정하기
+        -태그1::태그2 {}
+        -first-letter, first-line, before, after, selection
+        8.속성선택자(attribute selectors)
+        -input에 많이 씀
+        태그[]
+        9.기타 의사 클래스에 지정하기
+        - 태그:not(), 태그:lang(언어종류)
+
+        스타일 우선순위
+        1.속성값뒤에 important를 붙인 속성
+        2.인라인 스타일
+        3.#id로 지정한 속성
+        4.클래스
+        5.태그이름에 지정한 속성
+        6.상위 태그에 지정되어 상속된 속성
+    </style>-->
+    
+    
+    <!--외부스타일 지정방법(외부 css파일로 저장)-->
+    <link rel="stylesheet" href="css/Cascading.css">
+    <link rel="stylesheet" href="css/ex2.css">
+    <style>
+        ul a{background-color: black;color: yellow;}
+    </style>
+
+</head>
+<body>
+    <p class="p1" id="infosection_paragh1">안녕1</p>
+    <p class="p1" id="infosection_paragh2">안녕2</p>
+    <p class="p1" id="infosection_paragh3">안녕3</p>
+    <ul><a href="">하위레벨</a> 종류
+        <li>어떤 태그가(<a href="">descendant 레벨</a> )태그 </li>
+        <li>어떤 태그(<a href="">child 레벨</a> )태그</li>
+    </ul>
+    
+</body>
+</html>
