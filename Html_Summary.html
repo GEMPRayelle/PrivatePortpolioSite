@@ -91,7 +91,7 @@
         ul a{background-color: black;color: yellow;}
         /*ul태그가 나온다음 뒤에 나오는 태그들에 스타일 적용 <ul>안에 모든 <a>가 다 적용*/
         ul > a{background-color: aliceblue; color: brown;}
-        /*ul이 나온다음 뒤에 나오는 "태그에만" 스타일 적용*/
+        /*ul이 나온다음 뒤에 나오는 "태그들에만" 스타일 적용*/
 
         /*5.동일레벨의 다른 태그에 지정하기*/
         ul~ol{}
@@ -104,7 +104,7 @@
         */
 
         /*6.동적 의사 클래스(dynamic pseudo-class)*/
-        ul:link{text-decoration: none;}
+        ul:hover{text-decoration: none;}
         /*link: 한 번도 방문하지 않은상태
           visited: 해당 링크를 통해서 한번이라도 방문한 상태
           hover: 마우스 포인터를 올려놓았을때, but link랑 visited가 먼저 정의되야함
@@ -179,7 +179,9 @@
     <h2>부제목</h2> <!--h1부터 h6까지 낮아질수록 줄바꿈과 글자크기 작아짐, 태그 사용후 자동 줄바꿈이 일어남-->
     <ul><a href=""></a></ul><!--중요, 순서가 없는(동그라미) 리스트를 정의할 때 사용 ul(unordered list)-->
     <ol></ol> ordered list <!--순서(번호)가 매겨진 리스트(ordered list)-->
-    <li></li> list item <!--(List item) ul ol은 li랑 같이 써야함-->
+    <li></li> list item <!--(List item) ul ol은 li랑 같이 써야함 
+    문장끝에 공백이 없음, inline으로 이어주기 편함
+    inline속성으로 이어질경우 ul ol의 표기를 무시함(1.,●)-->
     <form action=""></form> <!-- 브라우저 화면에 나타나는 웹문서에는 form태그 효과가 나지않음-->
     
     <!--Inline유형: 새로운줄에서 시작하지않고, 너비도 해당 줄 전체가 아닌 태그의 내용만큼만 차지한다-->
@@ -221,7 +223,8 @@
 
     <dl></dl> <!-- definition(dictionary) list 사전식(Definition or Dictionary) 리스트로 보여줄 때 사용-->
     <dt></dt> <!-- description term 용어 표현을 위해 이 태그사용-->
-    <dd></dd> <!-- definition-description 용어설명-->
+    <dd></dd> <!-- definition-description 용어설명 
+    설명뒤에 공백이 있음 inline으로 이어주기가 힘듬-->
     메뉴
     <dl>
         <dt>아메리카노</dt>
