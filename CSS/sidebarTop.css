@@ -1,0 +1,102 @@
+.contentbar nav{
+    max-width: 100%;
+    height: 56px;
+    background: var(--light);
+    padding: 0 24px 0 0;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.contentbar nav::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: -20px -20px 0 var(--light);
+}
+
+.contentbar nav a{
+    color: var(--dark);
+}
+
+.contentbar nav .bx.bx-menu{
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.contentbar nav form{
+    max-width: 400px;
+    width: 100%;
+    margin-right: auto;
+}
+
+.contentbar nav form .form-input{
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+
+.contentbar nav form .form-input input{
+    flex-grow: 1;/*flex item 요소가 할당가능한 공간의 정도를 지정*/
+    padding: 0 16px;
+    height: 100%;
+    border: none;
+    background: var(--grey);
+    border-radius: 36px 0 0 36px;
+    outline: none;
+    width: 100%;
+    color: var(--dark);
+}
+
+.contentbar nav form .form-input button{
+    width: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    color: var(--light);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 0 36px 36px 0;
+}
+
+/*라이트 다크 기능을 위한 토글설정*/
+.contentbar nav .theme-toggle{
+    display: block;
+    min-width: 50px;
+    height: 25px;
+    background: var(--grey);
+    cursor: pointer;
+    position: relative;
+    border-radius: 25px;
+}
+
+.contentbar nav .theme-toggle::before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: calc(25px - 4px);
+    background: var(--primary);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.contentbar nav #theme-toggle:checked+.theme-toggle::before{
+    left: calc(100% - (25px - 4px) - 2px);
+
+}
+
+
+
